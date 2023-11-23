@@ -74,7 +74,7 @@ const SelectList = styled.div`
   gap: 20px;
   padding: 16px;
   position: fixed;
-  top: 116px;
+  top: 100px;
 `;
 
 export default DropDown;
