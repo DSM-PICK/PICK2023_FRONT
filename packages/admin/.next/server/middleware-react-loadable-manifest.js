@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"_app.tsx -> react-hot-toast":{"id":"_app.tsx -> react-hot-toast","files":[]}}

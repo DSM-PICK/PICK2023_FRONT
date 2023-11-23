@@ -1,0 +1,7 @@
+config:
+  name: pick-keeper
+  service_type: fe
+  port: 3000
+  prefix: /keeper
+  domain:
+    prod: keeper.dsm-pick.com

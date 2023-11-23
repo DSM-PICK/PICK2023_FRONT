@@ -1,0 +1,7 @@
+config:
+  name: pick-admin
+  service_type: fe
+  port: 3000
+  prefix: /admin
+  domain:
+    prod: admin.dsm-pick.com
