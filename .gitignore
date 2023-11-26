@@ -16,5 +16,4 @@ node_modules
 # etc
 .DS_Store
 
-/.yarn
 .env
