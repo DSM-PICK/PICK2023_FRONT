@@ -21,7 +21,7 @@ jobs:
 
       - name: diff-workspace
         id: set-matrix
-        run: echo "::set-output name=matrix::{\"workspaces\":[$(yarn workspaces list --json)]}"
+        run: echo "::set-output name=matrix::{\"workspaces\":[$(yarn workspaces list --json | tr "\n" ",")]}"
 
   build:
     permissions:
