@@ -21,7 +21,7 @@ jobs:
 
       - name: diff-workspace
         id: set-matrix
-        run: echo "::set-output name=matrix::{\"workspaces\":[$(yarn changed list --git-range $(git rev-parse HEAD^) --json | tr "\n" ",")]}"
+        run: echo "::set-output name=matrix::{\"workspaces\":[$(yarn workspaces list --git-range $(git rev-parse HEAD^) --json | tr "\n" ",")]}"
 
   build:
     permissions:
