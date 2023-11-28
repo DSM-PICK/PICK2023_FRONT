@@ -30,7 +30,7 @@ jobs:
           done
           
           json_array="${json_array%, }]"
-          matrix="{\"workspaces\": \"$json_array\" }"
+          matrix="{\"workspaces\": $json_array }"
           echo "::set-output name=matrix::$matrix"
           
   build:
