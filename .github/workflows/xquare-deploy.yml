@@ -24,8 +24,14 @@ jobs:
         run: |
           workspaces=($(yarn workspaces list --json | awk -F'"' '/"name":/{print $4}' | sed '1d' | sed 's/packages\///'))
           unset workspaces[0]
-          workspaces_string=$(IFS=,; echo "${workspaces[*]}")
-          matrix="{\"workspaces\":\"['$workspaces_string']\"}"
+          
+          json_array="["
+          for workspace in "${workspaces[@]}"; do
+            json_array+="\"$workspace\", "
+          done
+          
+          json_array="${json_array%, }]"
+          matrix="{\"workspaces\":\"['$json_array']\"}"
           echo "::set-output name=matrix::$matrix"
           
   build:
