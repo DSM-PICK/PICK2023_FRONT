@@ -4,16 +4,13 @@
 !/.yarn/releases
 !/.yarn/sdks
 
-# Swap the comments on the following lines if you don't wish to use zero-installs
-# Documentation here: https://yarnpkg.com/features/zero-installs
+/.pnp.*
 !/.yarn/cache
-#/.pnp.*
 node_modules
 
 **/.next
 **/.env
 
-# etc
 .DS_Store
 
 .env
