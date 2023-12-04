@@ -36,11 +36,12 @@ instance.interceptors.response.use(
       const originalRequest = config;
       const refreshToken = await getToken().refreshToken;
 
-      const { data } = await axios.post(`${BASE_URL}`, {
-        refreshToken,
+      const { data } = await axios.put(`${BASE_URL}/users/login`, {
+        "Refresh-Token": refreshToken,
       });
-      const { accessToken: newAccessToken, refreshToken: newRefreshToken } =
+      const { access_token: newAccessToken, refresh_token: newRefreshToken } =
         data;
+
       setToken(newAccessToken, newRefreshToken, new Date(""));
       axios.defaults.headers.common.Authorization = `Bearer ${newAccessToken}`;
       originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
