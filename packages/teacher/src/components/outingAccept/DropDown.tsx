@@ -1,9 +1,16 @@
 import { useState, useMemo } from "react";
 import styled from "@emotion/styled";
 import { dropDown } from "@/assets/outingAccept";
-import { IDropdownProps, ISortOption } from "./constants";
 import Image from "next/image";
 import OutSideClickHandler from "../common/outsideclickhandler/OutSideClickHandler";
+import { ISortOption } from "@/constants/DropDownItem";
+
+interface IDropdownProps {
+  width: number;
+  options: Array<ISortOption>;
+  value: string;
+  onChangeValue: (value: string) => void;
+}
 
 const DropDown = ({ width, onChangeValue, options, value }: IDropdownProps) => {
   const [isFold, setIsFold] = useState<boolean>(false);

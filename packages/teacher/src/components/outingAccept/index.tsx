@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { classNumArr, gradeNumArr } from "./constants";
 import { useDispatch } from "react-redux";
 import ConfirmBox from "../common/confirm";
 import DropDown from "./DropDown";
@@ -12,6 +11,7 @@ import { useApiError } from "@/hooks/useApiError";
 import { toast } from "react-hot-toast";
 import NoData from "../common/nodata";
 import { getMyClass } from "@/utils/api/common";
+import { classNumArr, gradeNumArr } from "@/constants/DropDownItem";
 
 interface Props {
   outing: OutingApplyListType[];
