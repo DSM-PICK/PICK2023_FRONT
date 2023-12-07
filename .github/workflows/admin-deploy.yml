@@ -13,15 +13,13 @@ jobs:
       id-token: write
       contents: read
     runs-on: ubuntu-latest
-
+    defaults:
+          run:
+            working-directory: packages/admin
+            
     steps:
       - name: check out repository
         uses: actions/checkout@v3
-
-      - name: cd package/admin
-        run: | 
-          cd packages/admin
-          echo -e "`ls -al`\n"
 
       - name: Deploy to xquare
         uses: team-xquare/xquare-deployment-action@master
