@@ -14,8 +14,8 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     defaults:
-          run:
-            working-directory: packages/admin
+      run:
+        working-directory: packages/admin
             
     steps:
       - name: check out repository
