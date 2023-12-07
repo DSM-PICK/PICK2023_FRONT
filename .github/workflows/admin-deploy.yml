@@ -18,6 +18,9 @@ jobs:
       - name: check out repository
         uses: actions/checkout@v3
 
+      - name: setup directory
+        run: cd packages/admin
+
       - name: Deploy to xquare
         uses: team-xquare/xquare-deployment-action@master
         with:
