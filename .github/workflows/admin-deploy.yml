@@ -19,7 +19,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: cd package/admin
-        run: "cd packages/admin"
+        run: | 
+          cd packages/admin
+          echo -e "`ls -al`\n"
 
       - name: Deploy to xquare
         uses: team-xquare/xquare-deployment-action@master
