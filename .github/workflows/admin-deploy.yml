@@ -27,4 +27,5 @@ jobs:
           environment: prod
           access_key: ${{ secrets.ADMIN_ACCESS }}
           github_token: ${{ secrets.PICK_ACCESS_TOKEN }}
+          config_file_path: packages/admin/.xquare/config.yaml
           
