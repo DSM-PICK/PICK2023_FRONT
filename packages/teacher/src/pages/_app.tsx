@@ -41,19 +41,11 @@ export default function App({
   return (
     <>
       <Head>
+        <title>PiCK teacher</title>
+        <meta name="viewport" content="width=device-width" />
         <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com/" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com/"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-          rel="stylesheet"
+          name="description"
+          content="야간자율학습 출결관리 웹 서비스, 여기서 전부 관리하고, 확인해요!"
         />
       </Head>
       <Provider store={store}>
